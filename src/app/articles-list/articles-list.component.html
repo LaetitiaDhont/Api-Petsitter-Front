@@ -1,0 +1,43 @@
+<!--Grid row-->
+<!--*ngFor="let annonce of annoncesList;  let i = index"-->
+
+<section>
+<div class="container">
+  <div class="row">
+
+
+    <!--Grid column-->
+    <div class=".col-12 .col-sm-6 .col-lg-8">
+
+      <mdb-card class="testimonial-card" *ngFor="let article of articlesList; index as i; first as isFirst; last as isLast; odd as isOdd"
+        id="card">
+
+        <!--Image annonce-->
+        <div class="avatar mx-auto">
+          <img src="http://www.votreveto.net/Uploads/conseils/furet.jpg" class="rounded-circle img-responsive"
+            *ngIf="isFirst ">
+          <img src="http://leschatslibresderians.fr/wp-content/uploads/2015/01/csm_combat-chat_6afc270884.jpg" class="rounded-circle img-responsive"
+            *ngIf="isLast">
+          <img src="https://www.hamiform.com/sites/uploads/2018/06/CHAT-ALIMENTATION-290x250-250x250.jpg" class="rounded-circle img-responsive"
+            *ngIf="isOdd">
+        </div>
+        <mdb-card-body class="rgba-indigo-light">
+          <!--Name-->
+          <mdb-card-title>
+            <h4>{{ i + 1 }} {{article.title}}</h4>
+          </mdb-card-title>
+          <hr>
+          <!--Quotation-->
+          <strong>Description : </strong>{{article.description}} <br>
+          <strong>Date de création: </strong> {{article.date}} <br>
+          <strong>Numéro de l'article: </strong> {{article.numero}}
+        </mdb-card-body>
+
+
+      </mdb-card>
+
+    </div>
+  </div>
+  </div>
+</section>
+<!-- End Grid column-->

@@ -1,0 +1,42 @@
+<!--Grid row-->
+<!--*ngFor="let annonce of annoncesList;  let i = index"-->
+
+<div class="container">
+  <div class="row">
+
+    <!--Grid column-->
+    <div class=".col-12 .col-sm-6 .col-lg-8">
+
+      <mdb-card class="testimonial-card" *ngFor="let reservation of reservationsList; index as i; first as isFirst; last as isLast; odd as isOdd" id="card2">
+
+        <!--Image annonce-->
+        <div class="avatar mx-auto">
+          <img src="http://static.wamiz.fr/images/news/medium/chat-stresse.png" class="rounded-circle img-responsive"
+            *ngIf="isFirst">
+          <img src="https://www.chasse38.com/wp-content/uploads/2016/04/lapin-3-250x250.jpg"
+            class="rounded-circle img-responsive" *ngIf="isLast">
+          <img src="https://static.wamiz.fr/images/articles/medium/mauvaise-haleine-chien-soins-naturels.jpg"
+            class="rounded-circle img-responsive" *ngIf="isOdd">
+        </div>
+        <mdb-card-body class="rgba-cyan-light">
+          <!--Name-->
+          <mdb-card-title>
+            <h4>{{ i + 1 }} {{reservation.title}}</h4>
+          </mdb-card-title>
+          <hr>
+          <!--Quotation-->
+          <strong>Nom Client : </strong>{{reservation.nom_client}}
+          <strong>Prenom Client: </strong>{{reservation.prenom_client}}<br>
+          <strong>Date Début : </strong>{{reservation.date_debut}} <br>
+          <strong>Date Fin: </strong> {{reservation.date_fin}} <br>
+          <strong>Telephone: </strong> {{reservation.telephone}}
+
+        </mdb-card-body>
+
+
+      </mdb-card>
+
+    </div>
+  </div>
+
+  <!-- End Grid column-->
