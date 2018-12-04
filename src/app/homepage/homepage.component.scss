@@ -1,11 +1,14 @@
+/* IMAGE SIZE */
 #icon {
     height: 65px;
 }
 
 #cardHelp {
     margin-top: 100px;
-   
 }
+
+/* TEXT PART */
+
 div > h4 {
     font-family: 'Segoe UI'; 
     font-size: 2fr;
@@ -17,11 +20,14 @@ div > p {
     font-size: 2em;
 }
 
-#button {
-    size: 25px;
+#title {
+    margin-top: 1em;
 }
 
-#image {
-    height: 160px;
-    width: 106px;
+/*BUTTONS */
+
+button > a {
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
 }

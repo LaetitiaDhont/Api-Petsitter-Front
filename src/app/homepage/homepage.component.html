@@ -2,103 +2,162 @@
 
 <body>
 
+    <!--Carousel Wrapper-->
+    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+        <!--First slide-->
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">BIENVENUE DANS L'API CHATCHUFFIT!</h3>
+                <p>First text</p>
+            </div>
+        </mdb-carousel-item>
+        <!--/First slide-->
+        <!--Second slide-->
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+            </div>
+        </mdb-carousel-item>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <mdb-carousel-item>
+            <div class="view w-100">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+            </div>
+        </mdb-carousel-item>
+        <!--/Third slide-->
+    </mdb-carousel>
+    <!--/.Carousel Wrapper-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mb-auto">
+                <h2 id="title">
+                    COMMENCER DES MAINTENANT!
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!-- DÉBUT DU CODE -->
+    <!-- DÉBUT CONTAINER -->
+    <!-- DÉBUT ROW -->
+
     <div class="container">
         <div class="row">
-            <!-- Card group -->
+            <!-- DÉBUT CARD DECK -->
 
             <div class="card-deck" id="cardHelp">
-                <!-- Card -->
-                <div class="card mb-4">
-                    <!-- Card image -->
+
+                <!-- PREMIERE CARD -->
+                <!-- CARD IMAGE -->
+
+                <div class="card mb-auto">
                     <div class="view overlay">
-                        <img class="card-img" src="https://www.publicdomainpictures.net/pictures/260000/nahled/magnifying-glass-1527991021IZy.jpg"
+                        <img class="card-img" src="https://ak0.picdn.net/shutterstock/videos/429940/thumb/1.jpg" alt="Card image cap">
+                    </div>
+
+                    <!-- CARD BODY -->
+                    <div class="card-body">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <h3 class="card-title"><strong>Rechercher un petsitter</strong></h3>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <p>Vous permet de rechercher un petsitter proche de chez vous rapidement!</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <button type="button" class="btn btn-info btn-rounded" id="button"><a class="row justify-content-center"
+                                        routerLink="annonces">Accéder aux annonces</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEUXIEME CARD -->
+                <!-- CARD IMAGE -->
+
+                <div class="card mb-auto">
+                    <div class="view overlay">
+                        <img class="card-img" src="https://www.theghostsinourmachine.com/wp-content/uploads/2014/03/Animal-Law-Cat-1000x434-Noah.jpg"
                             alt="Card image cap">
                     </div>
 
-                    <!-- Card content -->
-                    <div class="card-body" id="cardBody">
-
-                        <!-- Title -->
-                        <h4 class="card-title"><strong>Rechercher un petsitter</strong></h4>
-                        <br>
-                        <!-- Text -->
-                        <p>L'API vous permet de rechercher un petsitter proche de chez vous rapidement!</p>
-                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <div class="row justify-content-center">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-primary btn-md">Read more</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- Card content -->
-
-                </div>
-                <!-- Card -->
-
-                <!-- Card -->
-                <div class="card mb-4">
-
-                    <!-- Card image -->
-                    <div class="view overlay">
-                        <img class="card-img-top" src="https://images6.alphacoders.com/678/678636.jpg" alt="Card image cap">
-
-                    </div>
-
-                    <!-- Card content -->
+                    <!-- CARD BODY -->
                     <div class="card-body">
-                        <!-- Title -->
-                        <h4 class="card-title"><strong>S'informer</strong></h4>
-                        <br>
-                        <!-- Text -->
-                        <p>Vous pouvez vous informer des dernières actualités concernant les animaux.</p>
-
-                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <div class="row justify-content-center">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-primary btn-md">Aller aux annonces</button>
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <h3 class="card-title"><strong>S'informer</strong></h3>
                             </div>
                         </div>
+                        <br>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <p>Vous permet de vous informer des dernières actualités sur les animaux.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <button type="button" class="btn btn-info btn-rounded" id="button"><a class="row justify-content-center"
+                                        routerLink="articles">Accéder aux articles</a></button> </div>
+                        </div>
                     </div>
-                    <!-- Card content -->
-
                 </div>
-                <!-- Card -->
 
-                <!-- Card -->
-                <div class="card mb-4">
+                <!-- TROISIEME CARD -->
+                <!-- CARD IMAGE -->
 
-                    <!-- Card image -->
+                <div class="card mb-auto">
                     <div class="view overlay">
-                        <img class="card-img-top" src="https://c1.staticflickr.com/6/5213/5523800294_80f0687af7_b.jpg"
-                            alt="Card image cap">
-
+                        <img class="card-img" src="https://images2.alphacoders.com/270/270200.jpg" alt="Card image cap">
                     </div>
 
-                    <!-- Card content -->
+                    <!-- CARD BODY -->
                     <div class="card-body">
-
-                        <!-- Title -->
-                        <h4 class="card-title"><strong>Créer</strong></h4>
-                        <br>
-                        <!-- Text -->
-                        <p>Vous pouvez créer votre annonce pour proposer vos propres services.</p>
-                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <div class="row justify-content-center">
-                            <div class="col-4">
-                                <button type="button" class="btn btn-primary btn-md">Read more</button>
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <h3 class="card-title"><strong>Créer</strong></h3>
                             </div>
                         </div>
-
+                        <br>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <p>Vous pouvez créer vos propres annonces afin de proposer vos services.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <button type="button" class="btn btn-info btn-rounded" id="button"><a class="row justify-content-center"
+                                        routerLink="annonces">Créer une annonce</a></button>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Card content -->
-
                 </div>
-                <!-- Card -->
+                <!-- FIN DU CODE -->
+                <!-- FIN CONTAINER -->
+                <!-- FIN ROW -->
+                <!-- FIN DU CARD DECK-->
             </div>
-
-            <!-- Card group -->
-
         </div>
     </div>
 </body>
