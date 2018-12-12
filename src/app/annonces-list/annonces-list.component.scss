@@ -1,8 +1,35 @@
-#card, h4 {
-    margin-top: 100px;
-    font-size: 15px;
+/* CARD CONTENT */
+#cardAnnonce,{
+   margin-top: 100px;
   }
   
-  #logo2 {
-    height: 40px;
-  }
+/* TEXT PART */
+
+div > h4 {
+  font-family: 'Segoe UI'; 
+  font-size: 2fr;
+  
+}
+
+div > p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+}
+
+#title {
+  margin-top: 1em;
+}
+
+/*BUTTONS */
+
+button > a {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* IMAGES */
+#image {
+  margin-top: 1em;
+}
+  

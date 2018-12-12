@@ -1,45 +1,61 @@
-<!--Grid row-->
+<!--DÉBUT DU CODE -->
+<!--DÉBUT DU CONTAINER-->
+<!-- DÉBUT DU ROW -->
 <!--*ngFor="let annonce of annoncesList;  let i = index"-->
 
-<div class="container">
-  <div class="row">
+<!--  <mdb-card class="testimonial-card" *ngFor="let annonce of annoncesList; index as i; first as isFirst; last as isLast; odd as isOdd"
+      id="card"> -->
+<html>
 
-    
-    <!--Grid column-->
-    <div class=".col-12 .col-sm-6 .col-lg-8">
-        
-      <mdb-card class="testimonial-card" *ngFor="let annonce of annoncesList; index as i; first as isFirst; last as isLast; odd as isOdd" id="card">
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card-deck" *ngFor="let annonce of annoncesList" id="cardAnnonce">
 
-        <!--Image annonce-->
-        <div class="avatar mx-auto">
-          <img src="https://www.meadowlakepetresort.com/wp-content/uploads/IMG_6658-1500-250x250.jpg" class="rounded-circle img-responsive"
-            *ngIf="isFirst ">
-          <img src="https://www.kindredspiritsk9.com/wp-content/uploads/2017/02/DogTraining_BalanceATreat-250x250.jpg"
-            class="rounded-circle img-responsive" *ngIf="isLast">
-          <img src="https://d30j4r05tazxop.cloudfront.net/clickToGive/images/takeaction/campaigns/Petition_AdoptAShelterDogMonth-02_250.jpg"
-            class="rounded-circle img-responsive" *ngIf="isOdd">
+        <div class="card mb-auto">
+
+          <div class="row justify-content-center">
+            <div class="mx-auto">
+              <img src="https://images6.alphacoders.com/678/678636.jpg" alt="thumbnail" class="img-thumbnail" style="width: 400px"
+                id="image">
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <!-- CARD BODY -->
+          <div class="card-body">
+            <div class="row align-items-start">
+              <div class="col">
+                <span class="block-example border border-info">
+                  <h4 class="card-title"><strong>{{annonce.title}}</strong></h4>
+                </span>
+              </div>
+            </div>
+            <br>
+            <div class="row align-items-center">
+              <div class="col">
+                <p>{{annonce.description}}</p>
+              </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+              <div class="col">
+                <p class="">Disponibilité : {{annonce.date}}</p>
+              </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-info btn-rounded" id="button"><a class="row justify-content-center"
+                  routerLink="annonces">Contacter</a></button>
+            </div>
+          </div>
         </div>
-        <mdb-card-body class="rgba-blue-light">
-          <!--Name-->
-          <mdb-card-title>
-            <h4>{{ i + 1 }} {{annonce.title}}</h4>
-          </mdb-card-title>
-          <hr>
-          <!--Quotation-->
-          <strong>Description : </strong>{{annonce.description}} <br>
-          <strong>Disponibilité: </strong> {{annonce.date}}
-          <br>
-          <br>
-          <img src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Mail.png" alt="mailIcon" id="logo2">
-          <button mdbBtn type="button" color="info" rounded="true" mdbWavesEffect>Contacter</button>
-
-        </mdb-card-body>
-        
-
-      </mdb-card>
-
-      
+      </div>
     </div>
   </div>
-</div>
-  <!-- End Grid column-->
+
+</body>
+
+</html>
+<!-- End Grid column-->
