@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
-
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AnnoncesListComponent } from './annonces-list/annonces-list.component';
@@ -13,14 +12,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
-  { path: '', component: HomepageComponent},
+  { path: '', component: HomepageComponent },
   { path: 'header.component.html', component: HeaderComponent },
   { path: 'annonces', component: AnnoncesListComponent },
   { path: 'reservations', component: ReservationsListComponent },
   { path: 'articles', component: ArticlesListComponent },
-  { path: 'footer.component.html', component: FooterComponent }
+  { path: 'footer.component.html', component: FooterComponent },
+  { path: 'annonces/contact', component: ContactFormComponent }
+
 
 ];
 
@@ -32,13 +36,19 @@ const appRoutes: Routes = [
     ReservationsListComponent,
     ArticlesListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(appRoutes),
-    MDBBootstrapModule.forRoot(), MDBBootstrapModule, HttpClientModule,
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
 
 
 
