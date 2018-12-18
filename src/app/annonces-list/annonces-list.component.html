@@ -22,18 +22,23 @@
         <div class="card-body">
           <div class="row align-items-start">
             <div class="col">
-              <h4 class="card-title"><strong>{{annonce.title}}</strong></h4>
+              <h4 class="card-title" id="title"> Titre : {{annonce.title}}</h4>
             </div>
           </div>
           <div class="row align-items-center">
             <div class="col">
-              <p>{{annonce.description}}</p>
+              <p>Description : {{annonce.description}}</p>
             </div>
           </div>
           <br>
           <div class="row justify-content-center">
             <div class="col">
               <p>Disponibilité : {{annonce.date}}</p>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col">
+              Ville : {{annonce.city}}
             </div>
           </div>
           <!-- FIN DU CARD BODY-->
@@ -56,50 +61,3 @@
 </div>
 <!-- FIN DU CODE -->
 <!-- DÉBUT DU CONTACTFORM-->
-<div class="containerContact">
-  <div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
-    aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold">Contacter le petsitter</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body mx-3">
-          <div class="md-form mb-5">
-            <i class="fa fa-user prefix grey-text"></i>
-            <input type="text" id="form34" class="form-control validate" mdbInputDirective [formControl]="contactFormModalName">
-            <label data-error="wrong" data-success="right" for="form34">Votre Nom</label>
-          </div>
-
-          <div class="md-form mb-5">
-            <i class="fa fa-envelope prefix grey-text"></i>
-            <input type="email" id="form29" class="form-control validate" mdbInputDirective [formControl]="contactFormModalEmail">
-            <label data-error="wrong" data-success="right" for="form29">Votre email</label>
-          </div>
-
-          <div class="md-form mb-5">
-            <i class="fa fa-tag prefix grey-text"></i>
-            <input type="text" id="form32" class="form-control validate" mdbInputDirective [formControl]="contactFormModalSubject">
-            <label data-error="wrong" data-success="right" for="form32">Objet</label>
-          </div>
-
-          <div class="md-form">
-            <i class="fa fa-pencil prefix grey-text"></i>
-            <textarea type="text" id="form8" class="md-textarea form-control" rows="1" mdbInputDirective [formControl]="contactFormModalMessage"></textarea>
-            <label data-error="wrong" data-success="right" for="form8">Votre message</label>
-          </div>
-
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <button mdbBtn color="info" class="waves-light" mdbWavesEffect>Envoyer
-            <i class="fa fa-paper-plane-o ml-1"></i>
-          </button>
-        </div>
-        <!-- FIN DU CONTACTFORM -->
-      </div>
-    </div>
-  </div>
-</div>
